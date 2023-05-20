@@ -18,7 +18,7 @@ ProjetExemple/
   └── ...
 
 ```
-1. # Installation du Projet
+# 1.Installation du Projet
 ```
 npx create-react-app ProjetExemple
 cd ProjetExemple
@@ -26,7 +26,7 @@ npm start
 
 ```
 
-2. # Creer des routes
+# 2.Creer des routes
 Une route sert à déterminer quel contenu ou quel composant afficher à l'utilisateur en fonction de l'URL qu'il visite dans une application web.
 ## Installation des dépendances
 ```
@@ -96,7 +96,7 @@ function App() {
 ```
 path="*" est crucial pour gérer l'erreur
 
-3. # Créer un Layout
+# 3.Créer un Layout
 Un layout sert à fournir une structure visuelle commune (comme une barre de navigation, un pied de page, etc.) à plusieurs pages ou composants dans une application web.
 ## Structuration d'un Layout
 ```
