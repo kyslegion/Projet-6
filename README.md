@@ -100,7 +100,7 @@ function App() {
   );
 }
 ```
-path="*" est crucial pour gérer l'erreur
+Note: path="*" est crucial pour gérer l'erreur
 
 # 3.Créer un Layout
 Un layout sert à fournir une structure visuelle commune (comme une barre de navigation, un pied de page, etc.) à plusieurs pages ou composants dans une application web.
@@ -167,7 +167,7 @@ export default HomePage;
 On importe la fonction l'ayout pour l'appliquer sur la fonction responsable de la route de la page1
 
 
-### Créer des Composants
+# 4. Créer des Composants
 
 Un composant est un élément réutilisable que l'on peut ajouter à une route ou à d'autres composants dans une application React.
 
@@ -208,3 +208,39 @@ export default function Page1() {
 ```
 
 Dans cet exemple, nous importons le composant `Layout` qui peut servir de mise en page commune, puis nous utilisons le composant `Component1` dans la route `Page1`. Le contenu de `Component1` sera affiché à l'endroit où nous ajoutons `<Component1 />` dans la structure de la page.
+
+
+
+### Créer des Links vers des routes
+Voici le code mis en forme pour le format Markdown :
+
+Si je veux ajouter un (`Link`/Href) vers une route , je dois suivre les étapes suivantes :
+
+1. Aller dans la fonction de la route ou du composant qui renvoie le HTML.
+2. Importer Link depuis react-router-dom.
+3. Ajouter un modèle du type <Link to="/page2">Aller à la page 2</Link> dans le return de la fonction.
+
+Dans la route associée à `/` (la page d'accueil), je dois faire :
+
+```jsx
+import { Link } from 'react-router-dom';
+import Layout from '../Layout/layout.js';
+import Component1 from "../Components/component1.js";
+
+export default function Page1() {
+  return (
+    <Layout>
+      <div>
+        <h1>Page1 🧮</h1>
+        <Component1 />
+        <Link to="/page2">Aller à la page 2</Link>
+        <Link to="/page3">Aller à la page 3</Link>
+      </div>
+    </Layout>
+  );
+}
+
+```
+
+Dans cet exemple, j'ai importé `Link` depuis `react-router-dom` et l'ai utilisé pour créer des liens vers les pages 2 et 3. Les utilisateurs pourront cliquer sur ces liens pour être redirigés vers les pages correspondantes de votre application.
+
