@@ -1,21 +1,27 @@
 # La structuration de base d'un projet React
 ```
-ProjetExemple/
-  ├── public/
-  │   ├── index.html
-  │   └── ...
-  ├── src/
-  │   ├── main.js
-  │   ├── App.vue
-  │   └── ...
-  ├── assets/
-  │   ├── images/
-  │   ├── styles/
-  │   └── ...
-  ├── tests/
-  ├── package.json
-  ├── README.md
-  └── ...
+/ProjetExemple
+|-- node_modules/
+|-- public/
+|   |-- index.html
+|   |-- favicon.ico
+|   |-- manifest.json
+|-- src/
+|   |-- components/
+|   |   |-- Banner.js
+|   |   |-- Card.js
+|   |-- layouts/
+|   |   |-- Layout.js
+|   |-- routes/
+|   |   |-- page1.js
+|   |   |-- page2.js
+|   |   |-- page3.js
+|   |-- App.js
+|   |-- index.js
+|-- package.json
+|-- package-lock.json
+|-- README.md
+
 
 ```
 # 1.Installation du Projet
@@ -139,7 +145,7 @@ function Layout({ children }) {
 }
 export default Layout;
 ```
-{children} représente le contenu spécifique à chaque page (routes/composants, etc.) qui sera affiché dans la balise <main>. C'est à la fois un paramètre de la fonction Layout et un élément injecté dans le composant <main>.
+'{children}' représente le contenu spécifique à chaque page (routes/composants, etc.) qui sera affiché dans la balise <main>. C'est à la fois un paramètre de la fonction Layout et un élément injecté dans le composant <main>.
 
 À noter : Tout contenu placé entre les balises <Layout> et </Layout> est considéré comme un "enfant" du composant Layout, et est passé à la fonction Layout comme argument children.
 
@@ -159,3 +165,46 @@ function Page1() {
 export default HomePage;
 ```
 On importe la fonction l'ayout pour l'appliquer sur la fonction responsable de la route de la page1
+
+
+### Créer des Composants
+
+Un composant est un élément réutilisable que l'on peut ajouter à une route ou à d'autres composants dans une application React.
+
+Voici comment créer un composant :
+
+1. Créez un dossier "Components".
+2. Dans ce dossier, créez un fichier "Component1.js" avec le contenu suivant :
+
+```jsx
+export default function Component1() {
+  return (
+    <div>
+      <h1>Bienvenue dans Component1</h1>
+      <p>Ceci est un exemple de composant en React.</p>
+    </div>
+  );
+}
+
+```
+
+1. Ensuite, dans la route où vous souhaitez ajouter le composant, importez le composant et utilisez-le :
+
+```jsx
+import Layout from '../Layout/layout.js';
+import Component1 from "../Components/Component1.js";
+
+export default function Page1() {
+  return (
+    <Layout>
+      <div>
+        <h1>Page1 🧮</h1>
+        <Component1 />
+      </div>
+    </Layout>
+  );
+}
+
+```
+
+Dans cet exemple, nous importons le composant `Layout` qui peut servir de mise en page commune, puis nous utilisons le composant `Component1` dans la route `Page1`. Le contenu de `Component1` sera affiché à l'endroit où nous ajoutons `<Component1 />` dans la structure de la page.

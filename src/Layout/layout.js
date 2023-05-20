@@ -4,7 +4,7 @@ function Layout({ children }) {
     <div>
       <header>
         {/* Ici pourrait se trouver votre barre de navigation */}
-        <h1>Mon Application</h1>
+        <h1>Header "Kasa"</h1>
       </header>
 
       <main>
@@ -13,7 +13,7 @@ function Layout({ children }) {
 
       <footer>
         {/* Ici pourrait se trouver votre pied de page */}
-        <p>© 2023 Mon Application</p>
+        <p>FOOTER © 2023 Mon Application</p>
       </footer>
     </div>
   );
