@@ -18,7 +18,7 @@ ProjetExemple/
   └── ...
 
 ```
-# Installation
+# Installation du Projet
 ```
 npx create-react-app ProjetExemple
 cd ProjetExemple
@@ -27,11 +27,11 @@ npm start
 ```
 
 # Creer des routes
+Une route sert à déterminer quel contenu ou quel composant afficher à l'utilisateur en fonction de l'URL qu'il visite dans une application web.
 ## Installation des dépendances
 ```
 npm install --save react-router-dom
 ```
-
 ## Ajouter des routes 
 ### Pre-requis:
 -fichier js localisé dans le dossier routes avec fonction renvoyant du Html (ex: Home,About,Contact)
@@ -95,3 +95,67 @@ function App() {
 }
 ```
 path="*" est crucial pour gérer l'erreur
+
+# Créer un Layout
+Un layout sert à fournir une structure visuelle commune (comme une barre de navigation, un pied de page, etc.) à plusieurs pages ou composants dans une application web.
+## Structuration d'un Layout
+```
+/ProjetExemple
+  /src
+    /components
+    /layouts
+    /pages
+    /services
+    /styles
+    App.js
+    index.js
+
+```
+## Installation du Layout
+Créer un dossier layouts dans lequel on crée un fichier Layout.js
+
+### Dans le ficher /Layout/layout.js:
+```
+import React from 'react';
+
+function Layout({ children }) {
+  return (
+    <div>
+      <header>
+        {/* Ici pourrait se trouver votre barre de navigation */}
+        <h1>Mon Application</h1>
+      </header>
+
+      <main>
+        {children} {/* Les enfants du composant Layout sont injectés ici */}
+      </main>
+
+      <footer>
+        {/* Ici pourrait se trouver votre pied de page */}
+        <p>© 2023 Mon Application</p>
+      </footer>
+    </div>
+  );
+}
+export default Layout;
+```
+{children} représente le contenu spécifique à chaque page (routes/composants, etc.) qui sera affiché dans la balise <main>. C'est à la fois un paramètre de la fonction Layout et un élément injecté dans le composant <main>.
+
+À noter : Tout contenu placé entre les balises <Layout> et </Layout> est considéré comme un "enfant" du composant Layout, et est passé à la fonction Layout comme argument children.
+
+### Dans le dossier Route/page1.js
+```
+import Layout from '../Layout/layout.js'; 
+
+function Page1() {
+  return (
+    <Layout>
+      <h2>Accueil</h2>
+      <p>Bienvenue sur mon application !</p>
+    </Layout>
+  );
+}
+
+export default HomePage;
+```
+On importe la fonction l'ayout pour l'appliquer sur la fonction responsable de la route de la page1
