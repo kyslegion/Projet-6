@@ -147,7 +147,7 @@ export default Layout;
 ```
 '{children}' représente le contenu spécifique à chaque page (routes/composants, etc.) qui sera affiché dans la balise <main>. C'est à la fois un paramètre de la fonction Layout et un élément injecté dans le composant <main>.
 
-À noter : Tout contenu placé entre les balises <Layout> et </Layout> est considéré comme un "enfant" du composant Layout, et est passé à la fonction Layout comme argument children.
+À noter : Tout contenu placé entre les balises <Layout> et </Layout> est considéré comme un "enfant" du composant Layout, et est passé à la fonction Layout comme argument children ou comme Props c'est a dire une abréviation de "properties" en anglais, qui signifie "propriétés" en français..
 
 ### Dans le dossier Route/page1.js
 ```jsx
@@ -210,8 +210,61 @@ export default function Page1() {
 Dans cet exemple, nous importons le composant `Layout` qui peut servir de mise en page commune, puis nous utilisons le composant `Component1` dans la route `Page1`. Le contenu de `Component1` sera affiché à l'endroit où nous ajoutons `<Component1 />` dans la structure de la page.
 
 
+# 5.Créer des Props
+Le mot "props" est une abréviation de "properties" en anglais, qui signifie "propriétés" en français. En React, les props sont des objets JavaScript qui permettent de transmettre des données d'un composant parent à un composant enfant.
 
-# 5. Créer des Links vers des routes
+## Dans parent.js :
+
+```jsx
+function parent({ children }) {
+  return (
+    <div>
+      <header>
+        {/* Ici pourrait se trouver votre barre de navigation */}
+        <h1>Mon Application</h1>
+      </header>
+
+      <main>
+        {children} {/* Les enfants du composant Layout sont injectés ici */}
+      </main>
+
+      <footer>
+        {/* Ici pourrait se trouver votre pied de page */}
+        <p>© 2023 Mon Application</p>
+      </footer>
+    </div>
+  );
+}
+export default parent;
+```
+## Dans children.js :
+
+```jsx
+import React from 'react';
+import parent from './parent.js';
+
+function children() {
+  return (
+    <parent>
+      {/* Contenu qui va être passé dans {children} */}
+      <h2>Accueil</h2>
+      <p>Bienvenue sur mon application !</p>
+      {/* Contenu qui va être passé dans {children} */}
+    </parent>
+  );
+}
+
+export default Page1;
+
+```
+
+Dans cet exemple, nous avons deux fichiers : `parent.js` et `children.js`. Le composant `parent` dans `parent.js` reçoit la prop `children` et l'utilise pour afficher le contenu spécifique à chaque page dans la balise `<main>`.
+
+Dans `children.js`, nous importons le composant `parent` depuis `parent.js` et l'utilisons pour envelopper le contenu spécifique à la page d'accueil. Le contenu est placé entre les balises `<parent>` et `</parent>` et sera passé au composant `parent` en tant que `children`.
+
+Cela permet d'afficher le contenu de la page d'accueil dans la structure globale définie par `parent`.
+
+# 6. Créer des Links vers des routes
 Voici le code mis en forme pour le format Markdown :
 
 Si je veux ajouter un (`Link`/Href) vers une route , je dois suivre les étapes suivantes :
@@ -244,3 +297,4 @@ export default function Page1() {
 
 Dans cet exemple, j'ai importé `Link` depuis `react-router-dom` et l'ai utilisé pour créer des liens vers les pages 2 et 3. Les utilisateurs pourront cliquer sur ces liens pour être redirigés vers les pages correspondantes de votre application.
 
+# 7.Créer des Hooks
