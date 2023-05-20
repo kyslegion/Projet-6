@@ -1,5 +1,5 @@
 # La structuration de base d'un projet React
-```
+```jsx
 /ProjetExemple
 |-- node_modules/
 |-- public/
@@ -25,7 +25,7 @@
 
 ```
 # 1.Installation du Projet
-```
+```jsx
 npx create-react-app ProjetExemple
 cd ProjetExemple
 npm start
@@ -35,7 +35,7 @@ npm start
 # 2.Creer des routes
 Une route sert à déterminer quel contenu ou quel composant afficher à l'utilisateur en fonction de l'URL qu'il visite dans une application web.
 ## Installation des dépendances
-```
+```jsx
 npm install --save react-router-dom
 ```
 ## Ajouter des routes 
@@ -75,7 +75,7 @@ export default function Page1() {
 ```
 ## Gérer les erreurs de routes 
 Créer dans routes un fichier pageError.js avec une fonction NotFound:
-```
+```jsx
 function NotFound() {
   return (
     <div>
@@ -86,7 +86,7 @@ function NotFound() {
 export default NotFound;
 ```
 dans App.js ajouter une route pour gérer l'erreur 
-```
+```jsx
 function App() {
   return (
     <Router>
@@ -105,7 +105,7 @@ path="*" est crucial pour gérer l'erreur
 # 3.Créer un Layout
 Un layout sert à fournir une structure visuelle commune (comme une barre de navigation, un pied de page, etc.) à plusieurs pages ou composants dans une application web.
 ## Structuration d'un Layout
-```
+```jsx
 /ProjetExemple
   /src
     /components
@@ -121,7 +121,7 @@ Un layout sert à fournir une structure visuelle commune (comme une barre de nav
 Créer un dossier layouts dans lequel on crée un fichier Layout.js
 
 ### Dans le ficher /Layout/layout.js:
-```
+```jsx
 import React from 'react';
 
 function Layout({ children }) {
@@ -150,7 +150,7 @@ export default Layout;
 À noter : Tout contenu placé entre les balises <Layout> et </Layout> est considéré comme un "enfant" du composant Layout, et est passé à la fonction Layout comme argument children.
 
 ### Dans le dossier Route/page1.js
-```
+```jsx
 import Layout from '../Layout/layout.js'; 
 
 function Page1() {
