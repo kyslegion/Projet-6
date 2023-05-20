@@ -24,7 +24,7 @@
 
 
 ```
-# 1.Installation du Projet
+# 1. Installation du Projet
 ```jsx
 npx create-react-app ProjetExemple
 cd ProjetExemple
@@ -32,7 +32,7 @@ npm start
 
 ```
 
-# 2.Creer des routes
+# 2. Creer des routes
 Une route sert à déterminer quel contenu ou quel composant afficher à l'utilisateur en fonction de l'URL qu'il visite dans une application web.
 ## Installation des dépendances
 ```jsx
@@ -102,7 +102,7 @@ function App() {
 ```
 Note: path="*" est crucial pour gérer l'erreur
 
-# 3.Créer un Layout
+# 3. Créer un Layout
 Un layout sert à fournir une structure visuelle commune (comme une barre de navigation, un pied de page, etc.) à plusieurs pages ou composants dans une application web.
 ## Structuration d'un Layout
 ```jsx
@@ -211,7 +211,7 @@ Dans cet exemple, nous importons le composant `Layout` qui peut servir de mise e
 
 
 
-### Créer des Links vers des routes
+# 5. Créer des Links vers des routes
 Voici le code mis en forme pour le format Markdown :
 
 Si je veux ajouter un (`Link`/Href) vers une route , je dois suivre les étapes suivantes :
