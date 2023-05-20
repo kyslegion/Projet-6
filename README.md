@@ -42,14 +42,14 @@ npm install --save react-router-dom
 ### Pre-requis:
 -fichier js localisé dans le dossier routes avec fonction renvoyant du Html (ex: Home,About,Contact)
 Dans App.js importer les fichier js des routes
-```
-import Page1  from "./pages/page1.js";
+```jsx
+import Page1 from "./pages/page1.js";
 import Page2 from "./pages/page2.js";
-import Page3  from "./pages/page3.js";
+import Page3 from "./pages/page3.js";
 ```
 
 Dans la fonction App() du fichier App.js Ajouter une structuration Router>Routes>Route
-```
+```jsx
 function App() {
   return (
     <Router>
@@ -63,7 +63,7 @@ function App() {
 }
 ```
 Dans le fichier.js:
-```
+```jsx
 export default function Page1() {
     // Component implementation
     return (
