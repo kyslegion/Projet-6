@@ -40,7 +40,7 @@ npm install --save react-router-dom
 ```
 ## Ajouter des routes 
 ### Pre-requis:
--fichier js localisé dans le dossier routes avec fonction renvoyant du Html (ex: Home,About,Contact)
+-`fichier js` localisé dans le dossier routes avec fonction renvoyant du Html (ex: Home,About,Contact)
 Dans App.js importer les fichier js des routes
 ```jsx
 import Page1 from "./pages/page1.js";
@@ -48,7 +48,7 @@ import Page2 from "./pages/page2.js";
 import Page3 from "./pages/page3.js";
 ```
 
-Dans la fonction App() du fichier App.js Ajouter une structuration Router>Routes>Route c'est que l'on appelle des Outlets
+Dans la fonction `App()` du fichier `App.js` Ajouter une structuration `Router>Routes>Route` c'est que l'on appelle des Outlets
 ```jsx
 function App() {
   return (
@@ -62,7 +62,7 @@ function App() {
   );
 }
 ```
-Dans le fichier.js:
+Dans le `fichier.js`:
 ```jsx
 export default function Page1() {
     // Component implementation
@@ -74,7 +74,7 @@ export default function Page1() {
   }
 ```
 ## Gérer les erreurs de routes 
-Créer dans routes un fichier pageError.js avec une fonction NotFound:
+Créer dans routes un fichier `pageError.js` avec une fonction `NotFound`:
 ```jsx
 function NotFound() {
   return (
@@ -85,7 +85,7 @@ function NotFound() {
 }
 export default NotFound;
 ```
-dans App.js ajouter une route pour gérer l'erreur 
+dans `App.js` ajouter une route pour gérer l'erreur 
 ```jsx
 function App() {
   return (
@@ -100,10 +100,10 @@ function App() {
   );
 }
 ```
-Note: path="*" est crucial pour gérer l'erreur
+Note: `path="*"` est crucial pour gérer l'erreur
 
 # 3. Créer un Layout
-Un layout sert à fournir une structure visuelle commune (comme une barre de navigation, un pied de page, etc.) à plusieurs pages ou composants dans une application web.
+Un `layout` sert à fournir une structure visuelle commune (comme une barre de navigation, un pied de page, etc.) à plusieurs pages ou composants dans une application web.
 ## Structuration d'un Layout
 ```jsx
 /ProjetExemple
@@ -118,7 +118,7 @@ Un layout sert à fournir une structure visuelle commune (comme une barre de nav
 
 ```
 ## Installation du Layout
-Créer un dossier layouts dans lequel on crée un fichier Layout.js
+Créer un `dossier layouts` dans lequel on crée un fichier `Layout.js`
 
 ### Dans le ficher /Layout/layout.js:
 ```jsx
@@ -145,9 +145,9 @@ function Layout({ children }) {
 }
 export default Layout;
 ```
-'{children}' représente le contenu spécifique à chaque page (routes/composants, etc.) qui sera affiché dans la balise <main>. C'est à la fois un paramètre de la fonction Layout et un élément injecté dans le composant <main>.
+`{children}` représente le contenu spécifique à chaque page (routes/composants, etc.) qui sera affiché dans la balise <main>. C'est à la fois un paramètre de la fonction Layout et un élément injecté dans le composant <main>.
 
-À noter : Tout contenu placé entre les balises <Layout> et </Layout> est considéré comme un "enfant" du composant Layout, et est passé à la fonction Layout comme argument children ou comme Props c'est a dire une abréviation de "properties" en anglais, qui signifie "propriétés" en français..
+`À noter` : Tout contenu placé entre les balises <Layout> et </Layout> est considéré comme un "enfant" du composant Layout, et est passé à la fonction Layout comme argument children ou comme Props c'est a dire une abréviation de "properties" en anglais, qui signifie "propriétés" en français..
 
 ### Dans le dossier Route/page1.js
 ```jsx
@@ -173,8 +173,8 @@ Un composant est un élément réutilisable que l'on peut ajouter à une route o
 
 Voici comment créer un composant :
 
-1. Créez un dossier "Components".
-2. Dans ce dossier, créez un fichier "Component1.js" avec le contenu suivant :
+1. Créez un dossier `Components`.
+2. Dans ce dossier, créez un fichier `Component1.js` avec le contenu suivant :
 
 ```jsx
 export default function Component1() {
