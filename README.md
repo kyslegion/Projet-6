@@ -1,4 +1,4 @@
-![Texte alternatif](https://www.sooyoos.com/app/uploads/2021/06/react-javascript.png)
+![Texte alternatif](https://www.sooyoos.com/app/uploads/2021/06/react-javascript.png =300x200)
 
 # La structuration de base d'un projet React
 ```jsx
