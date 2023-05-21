@@ -1,8 +1,17 @@
+import Section1 from "../Assets/Main/Section1.png";
 export default function Component1() {
-    return (
-      <div>
-        <h1>Bienvenue dans Component1</h1>
-        <p>Ceci est un exemple de composant en React.</p>
-      </div>
-    );
-  }
+  return (
+    <>
+    <section>
+      <ul className="filter">
+        <li>
+          <h1>Chez vous, partout et ailleurs</h1>
+          <img id="Section1" src={Section1} alt="" />
+        </li>
+      </ul>
+    </section>
+
+    
+    </>
+  );
+}

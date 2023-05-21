@@ -1,8 +1,33 @@
 export default function Component2() {
     return (
-      <div>
-        <h1>Bienvenue dans Component2</h1>
-        <p>Ceci est un exemple de composant en React.</p>
-      </div>
+      <section id="Gallery">
+      <ul>
+        <li>
+          <h1>Titre de la location</h1>
+          <img id="Section1" src="#" alt="" />
+        </li>
+        <li>
+          <h1>Titre de la location</h1>
+           <img id="Section1" src="#" alt="" />
+        </li>
+        <li>
+          <h1>Titre de la location</h1>
+           <img id="Section1" src="#" alt="" />
+        </li>
+        <li>
+          <h1>Titre de la location</h1>
+           <img id="Section1" src="#" alt="" />
+        </li>
+        <li>
+          <h1>Titre de la location</h1>
+           <img id="Section1" src="#" alt="" />
+        </li>
+        <li>
+          <h1>Titre de la location</h1>
+           <img id="Section1" src="#" alt="" />
+        </li>
+      </ul>
+
+    </section>
     );
   }

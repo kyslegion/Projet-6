@@ -1,0 +1,72 @@
+main{
+    margin-top: 68px;
+}
+main section #Section1{
+    width: 100%;
+    border-radius: 25px;
+}
+
+.filter {
+    position: relative;
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .filter li {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+  
+  .filter li:nth-child(1):before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.3;
+    border-radius: 25px;
+  }
+  .filter li h1{
+    position: absolute;
+    width: 100%;
+    Font-family: Montserrat;
+    color: white;
+    font-weight: 500;
+    font-size:  3.12vw;
+  }
+  .filter img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+#Gallery {
+	background: #F7F7F7;
+	border-radius: 25px;
+	width: 100%;
+	height: 829px;
+}
+#Gallery ul{
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    padding-left: 0px;
+    justify-content: center;
+    align-items: center;
+    background: red;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+#Gallery ul li{
+    /* width: 340px;
+    height: 340px; */
+    width: 22.13vw;
+    height:22.13vw ;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    border-radius: 10px;
+}

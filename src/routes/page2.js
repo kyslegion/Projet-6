@@ -1,4 +1,4 @@
-
+import './page2.css'
 import Layout from '../Layout/layout.js';
 export default function Page2() {
     // Component implementation

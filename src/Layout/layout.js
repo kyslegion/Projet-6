@@ -1,10 +1,19 @@
-
+import logoImage from '../Assets/Header/LOGO.png';
+import './layout.css';
 function Layout({ children }) {
   return (
     <div>
       <header>
         {/* Ici pourrait se trouver votre barre de navigation */}
-        <h1>Header "Kasa"</h1>
+        <div className="header-logo">
+          <img src={logoImage} alt="" />
+        </div>
+        <nav className="nav">
+          <ul className="nav-btn">
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">A Propos</a></li>
+          </ul>
+        </nav>
       </header>
 
       <main>

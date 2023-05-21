@@ -1,3 +1,5 @@
+![Texte alternatif](https://www.sooyoos.com/app/uploads/2021/06/react-javascript.png)
+
 # La structuration de base d'un projet React
 ```jsx
 /ProjetExemple
@@ -296,7 +298,33 @@ export default function Page1() {
 ```
 
 Dans cet exemple, j'ai importé `Link` depuis `react-router-dom` et l'ai utilisé pour créer des liens vers les pages 2 et 3. Les utilisateurs pourront cliquer sur ces liens pour être redirigés vers les pages correspondantes de votre application.
-# 7.Créer un Proxy
+
+## 7. Utilisation des ressources dans React avec Asset
+
+Dans cette section, nous allons apprendre comment incorporer et utiliser des ressources, telles que des images, dans votre application React en utilisant le dossier "Asset".
+
+### Importation de l'image
+
+La première étape consiste à importer l'image dans votre fichier JSX. Vous pouvez utiliser la syntaxe `import` pour cela. Dans l'exemple suivant, nous importons l'image `LOGO.png` en utilisant le chemin relatif `../Assets/Header/LOGO.png`. L'importation se présente comme ceci :
+
+```jsx
+import logoImage from '../Assets/Header/LOGO.png';
+```
+
+Cela crée une variable `logoImage` qui contient le chemin d'accès à l'image importée.
+
+### Utilisation de l'image
+
+Après avoir importé l'image, vous pouvez l'utiliser dans votre code JSX. Dans l'exemple suivant, nous utilisons l'image dans une balise `<img>` en utilisant la syntaxe `{logoImage}` comme valeur de l'attribut `src` :
+
+```jsx
+<img src={logoImage} alt="" />
+```
+
+L'attribut `src` de la balise `<img>` est défini avec la variable `logoImage`, qui contient le chemin d'accès à l'image importée.
+
+
+# 8.Créer un Proxy
 ## Créer un proxy + fetch
 
 Pour accéder à des données extérieures à notre serveur, nous devons créer un proxy dans un fichier `proxy.js` et le placer à la racine. Voici les étapes à suivre :
@@ -377,7 +405,5 @@ export default function Page1() {
 }
 ```
 
-Maintenant, vous avez créé un proxy pour accéder à des données extérieures à votre serveur, et vous avez un composant enfant qui effectue une requête fetch pour récupérer ces données. Le composant parent `page1.js` utilise le composant enfant et peut être utilisé comme une route dans votre application.
 
-
-# 8.Créer des Hooks
+# 9.Créer des Hooks
