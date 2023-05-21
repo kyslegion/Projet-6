@@ -48,7 +48,7 @@ import Page2 from "./pages/page2.js";
 import Page3 from "./pages/page3.js";
 ```
 
-Dans la fonction App() du fichier App.js Ajouter une structuration Router>Routes>Route
+Dans la fonction App() du fichier App.js Ajouter une structuration Router>Routes>Route c'est que l'on appelle des Outlets
 ```jsx
 function App() {
   return (
@@ -296,5 +296,88 @@ export default function Page1() {
 ```
 
 Dans cet exemple, j'ai importé `Link` depuis `react-router-dom` et l'ai utilisé pour créer des liens vers les pages 2 et 3. Les utilisateurs pourront cliquer sur ces liens pour être redirigés vers les pages correspondantes de votre application.
+# 7.Créer un Proxy
+## Créer un proxy + fetch
 
-# 7.Créer des Hooks
+Pour accéder à des données extérieures à notre serveur, nous devons créer un proxy dans un fichier `proxy.js` et le placer à la racine. Voici les étapes à suivre :
+
+1. Installez Express et http-proxy-middleware.
+
+```bash
+npm install express http-proxy-middleware
+```
+
+2. Dans `proxy.js`, importez les modules nécessaires et configurez le proxy.
+
+```javascript
+const express = require('express');
+const { createProxyMiddleware } = require('http-proxy-middleware');
+
+const app = express();
+app.use(
+  '/course.oc-static.com/projects/Front-End+V2/P9+React+1/logements.json',
+  createProxyMiddleware({ 
+    target: 'http://s3-eu-west-1.amazonaws.com',
+    changeOrigin: true 
+  })
+);
+app.listen(4000);
+```
+
+3. Ensuite, créez le composant enfant `fetch.js` qui effectuera la requête fetch.
+
+```javascript
+import React from 'react';
+
+export default function HotelList() {
+  const fetchData = async () => {
+    try {
+      const response = await fetch('/course.oc-static.com/projects/Front-End+V2/P9+React+1/logements.json');
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      const jsonData = await response.json();
+      console.log(jsonData);
+    } catch (error) {
+      console.error('Erreur lors de la récupération des données:', error);
+    }
+  };
+
+  fetchData();
+
+  return (
+    <div>
+      {/* Affichez vos données ici. */}
+    </div>
+  );
+}
+```
+
+4. Ensuite, dans le composant parent (généralement la route) nommé `page1.js`, importez le composant enfant.
+
+```javascript
+import React from 'react';
+import Layout from '../Layout/layout.js';
+import Component1 from "../Components/component1.js";
+import { Link } from 'react-router-dom';
+
+export default function Page1() {
+  // Implémentation du composant
+  return (
+    <Layout>
+      <div>
+        <h1>Page1 🧮</h1>
+        <Component1 />
+        <Link to="/Page2">Aller à la page 2</Link>
+        <Link to="/Page3">Aller à la page 3</Link>
+      </div>
+    </Layout>
+  );
+}
+```
+
+Maintenant, vous avez créé un proxy pour accéder à des données extérieures à votre serveur, et vous avez un composant enfant qui effectue une requête fetch pour récupérer ces données. Le composant parent `page1.js` utilise le composant enfant et peut être utilisé comme une route dans votre application.
+
+
+# 8.Créer des Hooks
