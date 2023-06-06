@@ -156,7 +156,7 @@ export default Layout;
 
 `À noter` : Tout contenu placé entre les balises <Layout> et </Layout> est considéré comme un "enfant" du composant Layout, et est passé à la fonction Layout comme argument children ou comme Props c'est a dire une abréviation de "properties" en anglais, qui signifie "propriétés" en français..
 
-### Dans le dossier Route/page1.js
+### Exemple de Layout avec son contenu {children}
 ```jsx
 import Layout from '../Layout/layout.js'; 
 
@@ -176,13 +176,15 @@ On importe la fonction l'ayout pour l'appliquer sur la fonction responsable de l
 
 # 4. Créer des Composants
 
+## C'est quoi un Composant ? 
 Un composant est un élément réutilisable que l'on peut ajouter à une route ou à d'autres composants dans une application React.
+Généralement il ne contient qu'une fonction
 
-Voici comment créer un composant :
+## Comment créer un Composant ?
 
 1. Créez un dossier `components`.
-2. Dans ce dossier, créez un fichier `Component1.js` avec le contenu suivant :
-
+2. Dans ce dossier, créez le nombre de composant souhaité sous la forme de fichiers js(ex: `Component1.js`).
+Le fichier devra avoir une fonction retournant du html comme dans l'exemple ci dessous:
 ```jsx
 export default function Component1() {
   return (
@@ -192,11 +194,8 @@ export default function Component1() {
     </div>
   );
 }
-
 ```
-
-1. Ensuite, dans la route où vous souhaitez ajouter le composant, importez le composant et utilisez-le :
-
+1. Ensuite, il nous faut choisir une route dans laquelle placer notre component comme dans l'exemple ci dessous:
 ```jsx
 import Layout from '../Layout/layout.js';
 import Component1 from "../components/Component1.js";
@@ -211,13 +210,12 @@ export default function Page1() {
     </Layout>
   );
 }
-
 ```
-
 Dans cet exemple, nous importons le composant `Layout` qui peut servir de mise en page commune, puis nous utilisons le composant `Component1` dans la route `Page1`. Le contenu de `Component1` sera affiché à l'endroit où nous ajoutons `<Component1 />` dans la structure de la page.
 
 
 # 5.Créer des Props
+## C'est quoi un Props ? 
 Le mot "props" est une abréviation de "properties" en anglais, qui signifie "propriétés" en français. En React, les props sont des objets JavaScript qui permettent de transmettre des données d'un composant parent à un composant enfant.
 
 ## Dans parent.js :
@@ -272,15 +270,15 @@ Dans `children.js`, nous importons le composant `parent` depuis `parent.js` et l
 Cela permet d'afficher le contenu de la page d'accueil dans la structure globale définie par `parent`.
 
 # 6. Créer des Links vers des routes
-Voici le code mis en forme pour le format Markdown :
 
-Si je veux ajouter un (`Link`/Href) vers une route , je dois suivre les étapes suivantes :
+### Installer Link 
+Ajouter dans le fichier js dans lequel je veux utiliser les link `import { Link } from 'react-router-dom';`
 
-1. Aller dans la fonction de la route ou du composant qui renvoie le HTML.
-2. Importer Link depuis react-router-dom.
-3. Ajouter un modèle du type <Link to="/page2">Aller à la page 2</Link> dans le return de la fonction.
+Si je veux ajouter un (`Link`/Href) vers une route , je dois suivre les étapes suivantes 
 
-Dans la route associée à `/` (la page d'accueil), je dois faire :
+1. Ajouter un modèle du type <Link to="/page2">Aller à la page 2</Link> dans le return de la fonction.
+
+voici a quoi devrait ressembler le code:
 
 ```jsx
 import { Link } from 'react-router-dom';
