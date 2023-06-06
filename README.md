@@ -36,15 +36,15 @@ npm start
 ```
 
 # 2. Creer des routes
-Une route sert à déterminer quel contenu ou quel composant afficher à l'utilisateur en fonction de l'URL qu'il visite dans une application web.
-## Installation des dépendances
+## Installation des dépendances (react-router-dom)
 ```jsx
 npm install --save react-router-dom
 ```
 ## Ajouter des routes 
-### Pre-requis:
--`fichier js` localisé dans le dossier routes avec fonction renvoyant du Html (ex: Home,About,Contact)
-Dans App.js importer les fichier js des routes
+### C'est quoi une route ? 
+Une route va correspondre a un chemin précis, par exemple une page précise (home, contact, catalogue,etc)
+
+Dans `App.js` importer les components des routes contenues dans le dossier routes (ici Page 1,2,3 et NotFound)
 ```jsx
 import './App.css';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
@@ -53,8 +53,8 @@ import Page2 from "./routes/page2.js";
 import Page3 from "./routes/page3.js";
 import NotFound from "./routes/pageError.js";
 ```
-
-Dans la fonction `App()` du fichier `App.js` Ajouter une structuration `Router>Routes>Route` c'est que l'on appelle des Outlets
+Ensuite dans App.js dans notre fonction `App()` Ajouter une structuration `Router>Routes>Route` c'est que l'on appelle des Outlets.
+Dans React Router, le concept d'"outlet" fait référence à un emplacement réservé dans lequel le contenu des routes sera rendu.
 ```jsx
 function App() {
   return (
@@ -63,16 +63,15 @@ function App() {
         <Route path="/" element={<Page1 />} />
         <Route path="/Page2" element={<Page2 />} />
         <Route path="/Page3" element={<Page3 />} />
-        <Route path="*"element={<NotFound />} /> {/* Ce composant sera affiché lorsqu'aucune des routes précédentes n'a été appariée */}
+        <Route path="*"element={<NotFound />} />
       </Routes>
     </Router>
   );
 }
 ```
-Dans le `fichier.js`:
+Dans `Page1.js` voici a quoi ressemble une fonction qui retourne du html:
 ```jsx
 export default function Page1() {
-    // Component implementation
     return (
         <div>
             <h1>Page1 🧮</h1>
@@ -80,8 +79,8 @@ export default function Page1() {
     )
   }
 ```
-## Gérer les erreurs de routes 
-Créer dans routes un fichier `pageError.js` avec une fonction `NotFound`:
+### Gérer les erreurs de routes 
+Créer dans routes un fichier `pageError.js` avec une fonction `NotFound` pour gérer les erreurs de routes:
 ```jsx
 function NotFound() {
   return (
@@ -92,7 +91,7 @@ function NotFound() {
 }
 export default NotFound;
 ```
-dans `App.js` ajouter une route pour gérer l'erreur 
+Dans `App.js` ajouter une route pour gérer l'erreur 
 ```jsx
 function App() {
   return (
@@ -108,10 +107,11 @@ function App() {
 }
 ```
 Note: `path="*"` est crucial pour gérer l'erreur
-
 # 3. Créer un Layout
+## C'est quoi un Layout ? 
 Un `layout` sert à fournir une structure visuelle commune (comme une barre de navigation, un pied de page, etc.) à plusieurs pages ou composants dans une application web.
-## Structuration d'un Layout
+En bref il peut correspondre au footer et/ou au header par exemple.
+## Structuration d'un dossier Layout
 ```jsx
 /ProjetExemple
   /src
@@ -122,7 +122,6 @@ Un `layout` sert à fournir une structure visuelle commune (comme une barre de n
     /styles
     App.js
     index.js
-
 ```
 ## Installation du Layout
 Créer un `dossier layouts` dans lequel on crée un fichier `Layout.js`
@@ -152,6 +151,7 @@ function Layout({ children }) {
 }
 export default Layout;
 ```
+### A quoi correspond `{children}` ?
 `{children}` représente le contenu spécifique à chaque page (routes/composants, etc.) qui sera affiché dans la balise <main>. C'est à la fois un paramètre de la fonction Layout et un élément injecté dans le composant <main>.
 
 `À noter` : Tout contenu placé entre les balises <Layout> et </Layout> est considéré comme un "enfant" du composant Layout, et est passé à la fonction Layout comme argument children ou comme Props c'est a dire une abréviation de "properties" en anglais, qui signifie "propriétés" en français..
