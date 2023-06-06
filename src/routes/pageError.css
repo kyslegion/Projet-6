@@ -1,0 +1,26 @@
+h1{
+font-weight: 700;
+font-size: 18.75vw;
+color: #FF6060;
+margin: 0;
+}
+h2{
+    font-size: 2.34375vw;
+    color: #FF6060;
+    font-weight: 500;
+}
+#NotFound {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	align-items: center;
+}
+h3{
+    font-family: Montserrat;
+    font-size: 1.171875vw;
+    font-weight: 500;
+    text-align: left;
+    color: #FF6060;
+
+}

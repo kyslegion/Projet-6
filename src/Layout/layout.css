@@ -4,8 +4,23 @@ display: flex;
 main{
 
 }
-footer{
-
+footer {
+	margin-top: 100%;
+	background: black;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	align-content: center;
+	height: 209px;
+	flex-direction: column;
+}
+footer img{
+	width: 7.9vw;
+}
+footer h6{
+	color: white;
+	font-weight: 500;
+	Font-family: Montserrat;
 }
 .header-logo{
     width: 100%;

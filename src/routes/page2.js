@@ -1,12 +1,13 @@
 import './page2.css'
+
 import Layout from '../Layout/layout.js';
+import Component3 from "../Components/component3.js";
+import Collapse from "../Components/Collapse.js";
 export default function Page2() {
-    // Component implementation
     return (
         <Layout>
-        <div>
-            <h1>Page2 🧮</h1>
-        </div>
+        <Component3 />
+        <Collapse />
         </Layout>
     )
   }

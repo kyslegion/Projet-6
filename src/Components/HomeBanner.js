@@ -1,5 +1,5 @@
 import Section1 from "../Assets/Main/Section1.png";
-export default function Component1() {
+export default function HomeBanner() {
   return (
     <>
     <section>

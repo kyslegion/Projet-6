@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import logoImage from '../Assets/Header/LOGO.png';
+import footerLogoImage from '../Assets/Footer/LOGO.png';
 import './layout.css';
 function Layout({ children }) {
   return (
@@ -10,8 +12,9 @@ function Layout({ children }) {
         </div>
         <nav className="nav">
           <ul className="nav-btn">
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">A Propos</a></li>
+            <li><Link to="/">Accueil</Link></li>
+            <li><Link to="/Page2">A Propos</Link></li>
+            
           </ul>
         </nav>
       </header>
@@ -21,8 +24,8 @@ function Layout({ children }) {
       </main>
 
       <footer>
-        {/* Ici pourrait se trouver votre pied de page */}
-        <p>FOOTER © 2023 Mon Application</p>
+        <img src={footerLogoImage} alt=""></img>
+        <h6>© 2020 Kasa. All rights reserved</h6>
       </footer>
     </div>
   );
