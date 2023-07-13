@@ -1,8 +1,8 @@
 h1{
-font-weight: 700;
-font-size: 18.75vw;
-color: #FF6060;
-margin: 0;
+    font-weight: 700;
+    font-size: 18.75vw;
+    color: #FF6060;
+    margin: 0;
 }
 h2{
     font-size: 2.34375vw;
@@ -22,5 +22,4 @@ h3{
     font-weight: 500;
     text-align: left;
     color: #FF6060;
-
 }

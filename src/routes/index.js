@@ -1,12 +1,12 @@
 
-import './page1.css'
+import './index.css'
 import React, { useState } from 'react';
 import Layout from '../Layout/layout.js';
 import HomeBanner from "../Components/HomeBanner.js";
 import ListLocation from "../Components/ListLocation.js";
 import CardLocation from "../Components/CardLocation.js"; 
 
-export default function Page1() {
+export default function Index() {
   const [ElementIsVisible, setElementIsVisible] = useState(true);
   const [Data, setData] = useState(null); 
 

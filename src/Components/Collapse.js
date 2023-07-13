@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import arrowUp from "../Assets/Main/Vector(6).png";
 import arrowDown from "../Assets/Main/Vector(7).png";
 
@@ -6,18 +6,8 @@ export default function Collapse() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeItem, setActiveItem] = useState(null);
 
-  useEffect(() => {
-    // Effectuez ici les actions à exécuter lorsque l'état isOpen change
-    if (isOpen) {
-      console.log('Le Collapse est ouvert');
-    } else {
-      console.log('Le Collapse est fermé');
-    }
-  }, [isOpen]);
-
   const toggleCollapse = (index) => {
     if (activeItem === index) {
-      // Si on reclique sur le même élément, on désactive l'état
       setActiveItem(null);
     } else {
       setActiveItem(index);

@@ -34,10 +34,7 @@ export default function Slideshow({ Data }) {
                 <img id="img" src={element} alt="" />
               </li>
             ))}
-            
-          
           </ul>
-    
           <button id='goToNextSlide' onClick={goToNextSlide}>
           <img src={arrow1}></img>
             </button>

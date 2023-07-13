@@ -1,0 +1,750 @@
+main {
+  margin-top: 68px;
+}
+
+main section #Section1 {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+main section #filterimg {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+}
+
+.filter {
+  position: relative;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.filter li {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.filter li:nth-child(1):before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.3;
+  border-radius: 25px;
+}
+
+.filter li h1 {
+  position: absolute;
+  width: 100%;
+  font-family: Montserrat;
+  color: white;
+  font-weight: 500;
+  font-size: 3.12vw;
+}
+
+.filter img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  height: 223px;
+}
+
+@media (max-width: 768px) {
+  #Gallery ul {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  #Gallery ul li {
+    width: 100%;
+    height: auto;
+  }
+}
+
+#Gallery {
+  background: #F7F7F7;
+  border-radius: 25px;
+  width: 100%;
+}
+
+#Gallery ul {
+	grid-template-columns: 1fr 1fr 1fr;
+	width: 100%;
+	padding-left: 0px;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 50px;
+	padding-top: 100px;
+	padding-bottom: 25px;
+}
+
+#Gallery ul li {
+  display: flex;
+  width: 22.13vw;
+  height: 22.13vw;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  border-radius: 10px;
+  flex-direction: column;
+  display: flex;
+  justify-content: end;
+}
+
+#Gallery ul li::before {
+	position: absolute;
+	content: "";
+	width: 22.13vw;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+	height: 22.13vw;
+	border-radius: 10px;
+}
+
+#Gallery ul li .title {
+  position: absolute;
+  font-weight: 500;
+  font-size: 1.17vw;
+  color: white;
+  width: 17%;
+  margin-left: 1%;
+}
+
+#CardLocation #row1 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  padding-left: 0;
+}
+
+#CardLocation #row1 #hostTitle {
+	font-size: 36px;
+	color: #FF6060;
+	font-family: Montserrat;
+	font-size: 36px;
+	font-style: normal;
+	font-weight: 500;
+}
+
+#CardLocation #row1 #hostName {
+  border-radius: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+#hidden{
+  display: none;
+}
+#show{
+  display: block;
+}
+#CardLocation #row1 #hostName span {
+  color: #FF6060;
+  text-align: right;
+  font-family: Montserrat;
+  font-size: 1.171875vw;
+  font-weight: 500;
+}
+
+#CardLocation #row1 #hostName img {
+  border-radius: 36px;
+  width: 64px;
+}
+
+#CardLocation #title {
+  font-size: 36px !important;
+  margin-top: 30px !important;
+}
+
+#CardLocation #location {
+	font-family: Montserrat;
+	font-size: 1.171875vw;
+	font-weight: 500;
+	color: #FF6060;
+	color: #FF6060;
+	font-family: Montserrat;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 500;
+}
+#CardLocation #equipement {
+  display: flex;
+  justify-content: space-around;
+  padding-left: 0;
+}
+
+#CardLocation #row2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+#CardLocation #row2 #host {
+  margin: 0;
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: unset;
+}
+#CardLocation #row2 #tags > * {
+	background: #FF6060;
+	color: white;
+	border-radius: 10px;
+	display: flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	padding-inline: 30px;
+	padding-block: 3px;
+	idth: 115px;
+	height: 25px;
+}
+
+#CardLocation #row2 #tags {
+  padding-inline: 30px;
+  font-size: 1vw;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+  height: fit-content;
+}
+
+.stars {
+	font-size: 30px;
+}
+
+.star-red {
+  color: #FF6060;
+}
+
+.star-gray {
+  color: #E3E3E3;
+}
+
+#CardLocation #pictures li img {
+  border-radius: 25px;
+  height: 27.018229166666668vw;
+  width: 100%;
+}
+
+#CardLocation #pictures {
+  width: 100%;
+  padding-left: 0;
+}
+
+#CardLocation .pictures {
+  display: none;
+}
+
+#CardLocation .pictures.active {
+  display: block;
+  width: 100%;
+}
+
+#Slideshow {
+  position: relative;
+  display: flex;
+}
+
+#goToPreviousSlide {
+  position: absolute;
+  height: 5.156249801317851vw;
+  width: 3.039062519868215vw;
+  top: 50%;
+  background: transparent;
+  border: 0;
+}
+
+#goToPreviousSlide img {
+  width: 100%;
+  background: transparent;
+}
+
+#goToNextSlide {
+  position: absolute;
+  right: 0;
+  height: 5.156249801317851vw;
+  width: 3.039062519868215vw;
+  top: 50%;
+  background: transparent;
+  border: 0;
+}
+
+#goToNextSlide img {
+  width: 100%;
+}
+.CardLocationCollapse {
+	display: flex;
+	padding: 0;
+	margin: 0;
+	margin-top: 0px;
+	margin-top: 24px;
+	gap: 76px;
+	margin-bottom: 50%;
+}
+
+.CardLocationCollapse li {
+  background-color: #FF6060;
+  width: 100%;
+  height: 46px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  border-radius: 5px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.CardLocationCollapse li span {
+  color: white;
+  margin-inline: 2%;
+  font-size: 1.56vw;
+}
+
+.CardLocationCollapse div {
+  background-color: #F6F6F6;
+  margin: 0;
+}
+
+.CardLocationCollapse p {
+  margin-inline: 5%;
+}
+
+.CardLocationCollapse img {
+  margin-inline: 2%;
+}
+
+#equipments {
+  background: transparent;
+
+}
+
+#equipments li {
+  background: transparent !important;
+}
+
+#equipments {
+	position: absolute;
+	padding-left: 0;
+	margin-top: 50px;
+	background: #F6F6F6;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	padding-block: 20px;
+	width: 40vw;
+	right: 98px;
+}
+
+#equipments li {
+  color: #FF6060;
+  font-family: Montserrat;
+  font-size: 1.171875vw;
+  font-style: normal;
+  font-weight: 400;
+  margin-left: 20px;
+  height: fit-content;
+  margin-top: 40px;
+  margin: 0;
+  gap: 0;
+  margin-inline: 20px;
+  padding-left: 40px;
+}
+
+#descriptions {
+	position: absolute;
+	padding-left: 0;
+	margin-top: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 41vw;
+}
+
+#descriptions span {
+  color: #FF6060;
+  font-family: Montserrat;
+  font-size: 1.171875vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 142.6%;
+  padding: 20px;
+}
+.visible-pc {
+  display: none;
+}
+
+.hidden-pc {
+  display: block;
+}
+@media only screen and (max-width: 768px) {
+  #root {
+    padding-inline: 20px !important;
+    padding-block: 20px !important;
+  }
+
+  main {
+    margin-top: unset !important;
+  }
+
+  header {
+    display: flex !important;
+    flex-direction: row !important;
+  }
+
+  .filter li h1 {
+    font-family: Montserrat;
+    color: white;
+    font-weight: 500;
+    font-size: 24px;
+    text-align: left !important;
+    margin-left: 32px !important;
+  }
+
+  #Gallery ul li .title {
+    position: absolute;
+    font-weight: 500;
+    font-size: 18px;
+    color: white;
+    height: 4%;
+    width: 90%;
+    margin-left: 16px;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 4.172vw;
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  main section #Section1 {
+    width: 100% !important;
+    height: 255px !important;
+    border-radius: 10px !important;
+  }
+
+  .filter img {
+    width: 335px !important;
+    height: 111px !important;
+    border-radius: 10px !important;
+  }
+
+  main section #filterimg {
+    width: 100% !important;
+  }
+  #Gallery{
+    background: unset !important;
+  }
+  #Gallery ul {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-left: 0px;
+    display: flex;
+    gap: 20px !important;
+    gap: 2%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: unset !important;
+    padding-bottom: unset !important;
+    
+  }
+
+  #Gallery ul li {
+    display: flex;
+    width: 22.13vw;
+    height: unset !important;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    border-radius: 10px;
+    width: 100%;
+  }
+
+  #Gallery ul li::before {
+    position: absolute;
+    content: "";
+    width: 22.13vw;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    height: 22.13vw;
+    width: 91%;
+  }
+
+  .filter li:nth-child(1)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.3;
+    border-radius: 10px !important;
+  }
+
+  .header-logo img {
+    width: 145px;
+    height: 47px;
+  }
+
+  .header-logo {
+    width: unset !important;
+    height: unset !important;
+    width: 145px !important;
+    height: 47px !important;
+  }
+
+  .header-logo img {
+    width: 145px !important;
+    height: 47px !important;
+  }
+
+  .nav ul {
+    align-items: center !important;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    align-items: self-end;
+    justify-content: end;
+    gap: 10px !important;
+    flex-direction: unset;
+    padding-left: 0;
+    color: #FF6060;
+    text-align: right;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 142.6%;
+    text-decoration-line: underline;
+  }
+
+  footer {
+    background: black;
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+    align-content: center;
+    height: 209px;
+    flex-direction: column;
+  }
+
+  footer img {
+    width: 122px !important;
+    height: 39.444px;
+  }
+
+  footer h6 {
+    color: white;
+    font-weight: 500;
+    font-family: Montserrat;
+    font-size: 12px !important;
+  }
+
+  #CardLocation #pictures li img {
+    border-radius: 25px;
+    height: 27.018229166666668vw;
+    width: 100%;
+    height: 255px;
+    object-fit: cover;
+  }
+  #CardLocation #pictures {
+    padding-left: 0px;
+    width: 100%;
+  }
+  #CardLocation #row1 #hostTitle {
+    font-size: 18px;
+    color: #FF6060;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 142.6%;
+  }
+  #CardLocation #location {
+    font-family: Montserrat;
+    font-size: 1.171875vw;
+    font-weight: 500;
+    color: #FF6060;
+    color: #FF6060;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 142.6%;
+  }
+  #CardLocation #row1 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding-left: 0;
+    flex-direction: column;
+  }
+  #CardLocation #row2 {
+    display: flex;
+    flex-direction: column;
+  }
+  #CardLocation #row2 #tags > * {
+    background: #FF6060;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding-inline: 30px;
+    padding-block: 3px;
+    width: 84px;
+    height: 18px;
+    color: #FFF;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+  }
+  .stars {
+    font-size: 18px;
+    display: flex;
+    gap: 5px;
+    padding-top: 24px;
+  }
+  .CardLocationCollapse {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    margin-top: 0px;
+    margin-top: 24px;
+    gap: 20px;
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+  .CardLocationCollapse li {
+    background-color: #FF6060;
+    width: 100%;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    justify-content: space-between;
+    position: relative;
+    height: 29.931px;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+  }
+  .CardLocationCollapse li span {
+    color: white;
+    margin-inline: 2%;
+    font-size: 1.56vw;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+  }
+  #equipments li {
+    color: #FF6060;
+    font-family: Montserrat;
+    font-size: 1.171875vw;
+    font-style: normal;
+    font-weight: 400;
+    margin-left: 20px;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-top: 40px;
+    margin: 0;
+    gap: 0;
+    margin-inline: 20px;
+    padding-left: 40px;
+    color: #FF6060;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+  }
+  #descriptions {
+    position: unset !important;
+    top: 0;
+    width: 100%;
+    padding-left: 0;
+    margin-top: unset !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FF6060;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+  }
+  #descriptions span {
+    color: #FF6060;
+    font-family: Montserrat;
+    font-size: 1.171875vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 142.6%;
+    padding: 20px;
+    color: #FF6060;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+  }
+  #equipments {
+    position: unset !important;
+    top: 0;
+    width: 100%;
+    padding-left: 0;
+    margin-top: unset !important;
+    background: #F6F6F6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding-block: 20px;
+  }
+
+
+  .visible-pc {
+    display: flex;
+    width: 100%;
+    justify-content: right;
+    gap: 12px;
+    align-items: center;
+    padding-top: 24px;
+  }
+  .visible-pc span {
+    color: #FF6060;
+    text-align: right;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+  }
+  .visible-pc img{
+    width: 32px;
+    height: 32px;
+    border-radius: 16.5px;
+  }
+
+
+  .hidden-pc {
+    display: none !important;
+  }
+
+}
