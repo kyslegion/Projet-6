@@ -3,7 +3,6 @@ import Slideshow from './Slideshow';
 import CardLocationCollapse from './CardLocationCollapse';
 
 export default function CardLocation({ Data }) {
-  console.log(Data);
 
   const renderStars = (rating) => {
     const stars = [];
