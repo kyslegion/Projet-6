@@ -1,7 +1,8 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logoImage from '../Assets/Header/LOGO.png';
 import footerLogoImage from '../Assets/Footer/LOGO.png';
 import './layout.css';
+
 function Layout({ children }) {
   return (
     <div>
@@ -11,8 +12,16 @@ function Layout({ children }) {
         </div>
         <nav className="nav">
           <ul className="nav-btn">
-            <li><Link to="/">Accueil</Link></li>
-            <li><Link to="/apropos">A Propos</Link></li>
+            <li>
+              <NavLink exact to="/" activeClassName="active">
+                Accueil
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/apropos" activeClassName="active">
+                À Propos
+              </NavLink>
+            </li>
           </ul>
         </nav>
       </header>

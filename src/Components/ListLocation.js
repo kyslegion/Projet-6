@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-export default function ListLocation({ housingCliqued }) {
+export default function ListLocation({ housingSelected }) {
   const [dataJson, setdataJson] = useState([]);
-
+let navigate = useNavigate()
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -22,7 +23,8 @@ export default function ListLocation({ housingCliqued }) {
   }, []);
 
   const handleClick = (element) => {
-    housingCliqued(element); 
+    // housingSelected(element); 
+    navigate(`/logement/${element.id}`);
   };
 
   return (

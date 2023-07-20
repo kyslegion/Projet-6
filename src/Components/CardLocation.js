@@ -1,8 +1,8 @@
 import React from 'react';
 import Slideshow from './Slideshow';
-import CardLocationCollapse from './CardLocationCollapse';
+// import CardLocationCollapse from './CardLocationCollapse';
 
-export default function CardLocation({ Data }) {
+export default function CardLocation({ house }) {
 
   const renderStars = (rating) => {
     const stars = [];
@@ -17,22 +17,22 @@ export default function CardLocation({ Data }) {
 
   return (
     <div id='CardLocation'>
-      <Slideshow Data={Data} />
+      <Slideshow house={house} />
 
       <ul id='row1'>
         <li>
-          <h1 id='hostTitle'>{Data.title}</h1>
-          <span id='location'>{Data.location}</span>
+          <h1 id='hostTitle'>{house.title}</h1>
+          <span id='location'>{house.location}</span>
         </li>
         <li id='hostName' className='hidden-pc'>
-          <span>{Data.host.name}</span>
-          <img src={Data.host.picture} alt='' />
+          <span>{house.host.name}</span>
+          <img src={house.host.picture} alt='' />
         </li>
       </ul>
 
       <div id='row2'>
         <ul id='tags'>
-          {Data.tags.map((element, index) => (
+          {house.tags.map((element, index) => (
             <li key={index} className={`tag${index}`}>
               {element}
             </li>
@@ -40,15 +40,15 @@ export default function CardLocation({ Data }) {
         </ul>
 
         <ul id='host'>
-          <li className='stars'>{renderStars(Data.rating)}</li>
+          <li className='stars'>{renderStars(house.rating)}</li>
           <li id='hostName' className='visible-pc'>
-            <span>{Data.host.name}</span>
-            <img src={Data.host.picture} alt='' />
+            <span>{house.host.name}</span>
+            <img src={house.host.picture} alt='' />
           </li>
         </ul>
       </div>
 
-      <CardLocationCollapse Data={Data} />
+      {/* <CardLocationCollapse house={house} /> */}
     </div>
   );
 }

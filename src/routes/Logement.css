@@ -1,0 +1,11 @@
+#carouselCounter {
+	position: absolute;
+	bottom: 25px;
+	justify-content: center;
+	text-align: center;
+	/* display: flex; */
+	justify-content: center;
+	/* left: 50%; */
+	width: 100%;
+	color: white;
+}
