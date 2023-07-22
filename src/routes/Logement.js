@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import Slideshow from '../Components/Slideshow'
-// import CardLocationCollapse from '../Components/CardLocationCollapse'
 import "./Logement.css"
 import Layout from '../Layout/layout';
 import { useParams } from 'react-router-dom';
 import Collapse from '../Components/Collapse';
 
 export default function Logement() {
+
   const { id } = useParams();
+  
   const [dataJson, setDataJson] = useState(null);
   const renderStars = (rating) => {
     const stars = [];
@@ -42,7 +43,6 @@ export default function Logement() {
     return <div>Loading...</div>;
   }
 
-  // Find the corresponding house object based on the provided id
   const house = dataJson.find((element) => element.id === id);
   const items = [
     {
@@ -94,7 +94,6 @@ export default function Logement() {
         </ul>
       </div>
       <Collapse items={items} displayFlexColumn={displayFlexColumn}  />
-      {/* <CardLocationCollapse house={house} /> */}
     </div>
     </Layout>
   );

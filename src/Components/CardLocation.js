@@ -1,6 +1,5 @@
 import React from 'react';
 import Slideshow from './Slideshow';
-// import CardLocationCollapse from './CardLocationCollapse';
 
 export default function CardLocation({ house }) {
 
@@ -48,7 +47,6 @@ export default function CardLocation({ house }) {
         </ul>
       </div>
 
-      {/* <CardLocationCollapse house={house} /> */}
     </div>
   );
 }

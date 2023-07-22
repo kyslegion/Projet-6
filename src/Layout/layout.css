@@ -20,7 +20,8 @@ header {
 	color: white;
 	font-weight: 500;
 	font-family: Montserrat;
-  }
+	text-align: center;
+}
   
   .header-logo {
 	width: 100%;
