@@ -31,6 +31,10 @@ export default function Logement() {
 
         const jsonData = await response.json();
         setDataJson(jsonData);
+<<<<<<< HEAD
+=======
+        const house = jsonData.find((element) => element.id === id);
+>>>>>>> 367c4870c9ea8a3720047a5690f3c0c50c803823
       
 
       } catch (error) {
@@ -78,7 +82,11 @@ export default function Logement() {
         </li>
         <li id='hostName' className='hidden-pc'>
           <span>{house.host.name}</span>
+<<<<<<< HEAD
           <img src={house.host.picture} alt='house host ' />
+=======
+          <img src={house.host.picture} alt='house host picture' />
+>>>>>>> 367c4870c9ea8a3720047a5690f3c0c50c803823
         </li>
       </ul>
 
@@ -95,7 +103,11 @@ export default function Logement() {
           <li className='stars'>{renderStars(house.rating)}</li>
           <li id='hostName' className='visible-pc'>
             <span>{house.host.name}</span>
+<<<<<<< HEAD
             <img src={house.host.picture} alt='house host ' />
+=======
+            <img src={house.host.picture} alt='house host picture' />
+>>>>>>> 367c4870c9ea8a3720047a5690f3c0c50c803823
           </li>
         </ul>
       </div>

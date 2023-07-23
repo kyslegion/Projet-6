@@ -26,6 +26,7 @@ export default function ListLocation() {
 
   return (
     <section id="Gallery">
+<<<<<<< HEAD
     <ul>
       {dataJson.map((element, index) => (
         <li key={index}>
@@ -37,5 +38,16 @@ export default function ListLocation() {
       ))}
     </ul>
   </section>
+=======
+        <ul>
+          {dataJson.map((element, index) => (
+            <li key={index} onClick={() => handleClick(element)}>
+              <h3 className='title'>{element.title}</h3>
+              <img id="Section1" src={element.cover} alt="Gallery cover" />
+            </li>
+          ))}
+        </ul>
+    </section>
+>>>>>>> 367c4870c9ea8a3720047a5690f3c0c50c803823
   );
 }

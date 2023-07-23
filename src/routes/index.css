@@ -110,7 +110,10 @@ main section #filterimg {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+<<<<<<< HEAD
   padding-left: 0;
+=======
+>>>>>>> 367c4870c9ea8a3720047a5690f3c0c50c803823
 }
 #Gallery ul li {
   position: relative;
