@@ -110,6 +110,7 @@ main section #filterimg {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+  padding-left: 0;
 }
 #Gallery ul li {
   position: relative;
@@ -243,13 +244,11 @@ main section #Section1 {
 	gap: 10px;
 	padding-left: 0px;
 	padding-right: 0px;
-	/* height: -moz-fit-content; */
 	height: fit-content;
 	flex-wrap: wrap;
 }
 
 .stars {
-	/* font-size: 30px; */
   font-size: 1.953125vw;
 }
 
@@ -449,8 +448,8 @@ main section #Section1 {
     font-weight: 500;
     font-size: 18px;
     color: white;
-    height: 4%;
-    width: 90%;
+    height: unset;
+    width: unset;
     margin-left: 16px;
     color: #FFF;
     font-family: Montserrat;
@@ -536,7 +535,7 @@ main section #Section1 {
     flex-direction: row;
     height: 100%;
     align-items: self-end;
-    justify-content: end;
+    justify-content: flex-end;
     gap: 10px !important;
     flex-direction: unset;
     padding-left: 0;
