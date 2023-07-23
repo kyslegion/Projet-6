@@ -12,6 +12,7 @@ function App() {
         <Route path="/" element={<Index />} />
         <Route path="/apropos" element={<Apropos />} />
         <Route path="/logement/:id" element={<Logement />} />
+        <Route path="/logement" element={<NotFound />} />
         <Route path="*"element={<NotFound />} /> 
       </Routes>
     </Router>

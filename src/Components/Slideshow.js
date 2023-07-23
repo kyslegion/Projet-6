@@ -1,4 +1,3 @@
-
 import React from 'react';
 import arrow1 from '../Assets/Main/Flecheg (1).png'
 import arrow2 from '../Assets/Main/Flecheg (2).png'
@@ -21,22 +20,24 @@ export default function Slideshow({ house }) {
       };
       return (
         <div id='Slideshow'>
-            <button id='goToPreviousSlide' onClick={goToPreviousSlide}>
-            <img src={arrow2}></img>
-            </button>
+            {house.pictures.length > 1 && (
+              <button id='goToPreviousSlide' onClick={goToPreviousSlide}>
+                <img src={arrow2} alt='left arrow'></img>
+              </button>
+            )}
           <ul id='pictures'>
-          
             {house.pictures.map((element, index) => (
               <li key={index} className={`pictures ${index === currentIndex ? 'active' : ''}`}>
-                <img id="img" src={element} alt="" />
+                <img id="img" src={element} alt="house picture" />
               </li>
             ))}
           </ul>
-          <button id='goToNextSlide' onClick={goToNextSlide}>
-          <img src={arrow1}></img>
-            </button>
+            {house.pictures.length > 1 && (
+              <button id='goToNextSlide' onClick={goToNextSlide}>
+                <img src={arrow1} alt='right arrow'></img>
+              </button>
+            )}
             <div id="carouselCounter">{currentIndex + 1}/ {house.pictures.length}</div>
         </div>
       );
 }
-

@@ -33,7 +33,7 @@ export default function ListLocation() {
           {dataJson.map((element, index) => (
             <li key={index} onClick={() => handleClick(element)}>
               <h3 className='title'>{element.title}</h3>
-              <img id="Section1" src={element.cover} alt="" />
+              <img id="Section1" src={element.cover} alt="Gallery cover" />
             </li>
           ))}
         </ul>

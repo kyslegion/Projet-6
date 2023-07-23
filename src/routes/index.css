@@ -108,11 +108,9 @@ main section #filterimg {
 
 #Gallery ul {
 	display: flex;
-	flex-wrap: grid;
-	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 }
-
 #Gallery ul li {
   position: relative;
 	gap: 57%;
