@@ -31,8 +31,6 @@ export default function Logement() {
 
         const jsonData = await response.json();
         setDataJson(jsonData);
-      
-
       } catch (error) {
         console.error('Erreur lors de la récupération des données:', error);
       }
@@ -79,6 +77,9 @@ export default function Logement() {
         <li id='hostName' className='hidden-pc'>
           <span>{house.host.name}</span>
           <img src={house.host.picture} alt='house host ' />
+          <img src={house.host.picture} alt='house host ' />
+          <img src={house.host.picture} alt='house host picture' />
+
         </li>
       </ul>
 
@@ -95,7 +96,6 @@ export default function Logement() {
           <li className='stars'>{renderStars(house.rating)}</li>
           <li id='hostName' className='visible-pc'>
             <span>{house.host.name}</span>
-            <img src={house.host.picture} alt='house host ' />
           </li>
         </ul>
       </div>
