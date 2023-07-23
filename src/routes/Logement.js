@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 import Slideshow from '../Components/Slideshow'
 import "./Logement.css"
 import Layout from '../Layout/layout';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import Collapse from '../Components/Collapse';
 
 export default function Logement() {
 
   const { id } = useParams();
-  
+  let navigation=useNavigate()
   const [dataJson, setDataJson] = useState(null);
   const renderStars = (rating) => {
     const stars = [];
@@ -31,6 +31,8 @@ export default function Logement() {
 
         const jsonData = await response.json();
         setDataJson(jsonData);
+      
+
       } catch (error) {
         console.error('Erreur lors de la récupération des données:', error);
       }
@@ -44,6 +46,10 @@ export default function Logement() {
   }
 
   const house = dataJson.find((element) => element.id === id);
+  if (!house) {
+    navigation('/404', { replace: true });
+    return null;
+  }
   const items = [
     {
       title: "Description",
@@ -72,7 +78,7 @@ export default function Logement() {
         </li>
         <li id='hostName' className='hidden-pc'>
           <span>{house.host.name}</span>
-          <img src={house.host.picture} alt='' />
+          <img src={house.host.picture} alt='house host ' />
         </li>
       </ul>
 
@@ -89,7 +95,7 @@ export default function Logement() {
           <li className='stars'>{renderStars(house.rating)}</li>
           <li id='hostName' className='visible-pc'>
             <span>{house.host.name}</span>
-            <img src={house.host.picture} alt='' />
+            <img src={house.host.picture} alt='house host ' />
           </li>
         </ul>
       </div>

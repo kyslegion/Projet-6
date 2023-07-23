@@ -20,7 +20,7 @@ export default function Collapse({ items, displayFlexColumn }) {
             <li key={index} onClick={() => toggleCollapse(index)}>
               <div className='title' >
                 <span className='titleSpan' >{item.title}</span>
-                <img className='titleImg' src={openItems.includes(index) ? arrowUp : arrowDown} alt=""/>
+                <img className='titleImg' src={openItems.includes(index) ? arrowUp : arrowDown} alt="arrow collapse"/>
               </div>
               
               {openItems.includes(index) && (

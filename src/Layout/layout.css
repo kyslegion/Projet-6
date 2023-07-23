@@ -44,7 +44,7 @@ header {
 	flex-direction: row;
 	height: 100%;
 	align-items: self-end;
-	justify-content: end;
+	justify-content: flex-end;
 	gap: 57px;
   }
   

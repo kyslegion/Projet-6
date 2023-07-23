@@ -8,7 +8,7 @@ function Layout({ children }) {
     <div>
       <header>
         <div className="header-logo">
-          <img src={logoImage} alt="" />
+          <img src={logoImage} alt="header logo" />
         </div>
         <nav className="nav">
           <ul className="nav-btn">
@@ -31,7 +31,7 @@ function Layout({ children }) {
       </main>
 
       <footer>
-        <img src={footerLogoImage} alt=""></img>
+        <img src={footerLogoImage} alt="footer logo"></img>
         <h6>© 2020 Kasa. All rights reserved</h6>
       </footer>
     </div>

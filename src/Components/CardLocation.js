@@ -25,7 +25,7 @@ export default function CardLocation({ house }) {
         </li>
         <li id='hostName' className='hidden-pc'>
           <span>{house.host.name}</span>
-          <img src={house.host.picture} alt='' />
+          <img src={house.host.picture} alt='hostName' />
         </li>
       </ul>
 
@@ -42,7 +42,7 @@ export default function CardLocation({ house }) {
           <li className='stars'>{renderStars(house.rating)}</li>
           <li id='hostName' className='visible-pc'>
             <span>{house.host.name}</span>
-            <img src={house.host.picture} alt='' />
+            <img src={house.host.picture} alt='host picture' />
           </li>
         </ul>
       </div>
