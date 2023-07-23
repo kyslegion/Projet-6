@@ -28,7 +28,7 @@ export default function Slideshow({ house }) {
           <ul id='pictures'>
             {house.pictures.map((element, index) => (
               <li key={index} className={`pictures ${index === currentIndex ? 'active' : ''}`}>
-                <img id="img" src={element} alt="house picture" />
+                <img id="img" src={element} alt="house " />
               </li>
             ))}
           </ul>
