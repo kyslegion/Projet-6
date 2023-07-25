@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 export default function ListLocation() {
   const [dataJson, setdataJson] = useState([]);
   let navigate = useNavigate()
@@ -28,11 +27,9 @@ export default function ListLocation() {
     <section id="Gallery">
     <ul>
       {dataJson.map((element, index) => (
-        <li key={index}>
-          <Link to={`/logement/${element.id}`}>
+        <li key={index} onClick={() => navigate(`/logement/${element.id}`)}>
             <h3 className='title'>{element.title}</h3>
             <img id="Section1" src={element.cover} alt="Gallery cover" />
-          </Link>
         </li>
       ))}
     </ul>
