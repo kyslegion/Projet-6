@@ -23,8 +23,8 @@ export default function Logement() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // const response = await fetch('/course.oc-static.com/projects/Front-End+V2/P9+React+1/logements.json');
-        const response = await fetch(process.env.PUBLIC_URL + 'logements.json');
+        const response = await fetch('/course.oc-static.com/projects/Front-End+V2/P9+React+1/logements.json');
+        // const response = await fetch(process.env.PUBLIC_URL + 'logements.json');
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
